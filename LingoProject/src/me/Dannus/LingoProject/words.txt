@@ -126,7 +126,7 @@ bezet
 balie
 buien
 bruin
-conus
+casus
 cello
 creme
 clubs
@@ -140,6 +140,7 @@ claim
 cyber
 chili
 cobra
+corso
 cijfer
 cycli
 crime
