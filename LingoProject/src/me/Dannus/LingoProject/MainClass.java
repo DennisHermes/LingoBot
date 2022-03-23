@@ -12,10 +12,11 @@ public class MainClass {
 		
 		//importing words
 		System.out.println("Starting importing words..");
-		List<String> words = FileManager.wordSorter();
-		System.out.println(words.size() + " words found.");
+		List<String> wordsRaw = FileManager.wordSorter();
+		System.out.println(wordsRaw.size() + " words found.");
 		
 		for (int i = 0; i < 100; i++) {
+			List<String> words = wordsRaw;
 			lingo(words);
 		}
 	}
@@ -43,7 +44,7 @@ public class MainClass {
 		}
 		
 		System.out.println("Total words left: " + possible.size());
-		System.out.println("Suggested words: " + possible);
+		System.out.println("Suggested words: " + WordSuggester.suggestWord(possible));
 		
 		for (int i = 0; i < 10; i++) {
 			//Ask for containing letter 1
