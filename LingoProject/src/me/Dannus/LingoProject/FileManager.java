@@ -9,6 +9,9 @@ import java.util.List;
 
 public class FileManager {
 
+	static int removed = 0;
+	static String remove = "jalon,xeres";
+	
 	static List<String> wordSorter() {
 		List<String> words = new ArrayList<String>();
 		
@@ -44,6 +47,11 @@ public class FileManager {
 	        read.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+		
+		for (int i = 0; i < remove.split(",").length; i++) {
+			words.remove(remove.split(",")[i]);
+			removed++;
 		}
 		
 		return words;

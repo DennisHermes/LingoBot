@@ -106,6 +106,8 @@ public class WordSuggester {
         if (sorted.size() > 0) suggesting = suggesting + sorted.get(sorted.size() - 1);
         if (sorted.size() > 1) suggesting = suggesting + ", " + sorted.get(sorted.size() - 2);
         if (sorted.size() > 2) suggesting = suggesting + ", " + sorted.get(sorted.size() - 3);
+        if (sorted.size() > 3) suggesting = suggesting + ", " + sorted.get(sorted.size() - 4);
+        if (sorted.size() > 4) suggesting = suggesting + ", " + sorted.get(sorted.size() - 5);
         
 		return suggesting;
 	}
