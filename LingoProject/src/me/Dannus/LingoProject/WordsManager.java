@@ -7,12 +7,14 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileManager {
+public class WordsManager {
 
-	static int removed = 0;
 	static String remove = "jalon,xeres";
+	static int removed = remove.split(",").length;
+	static List<String> defaultWords = null;
+	static List<String> possibleWords = null;
 	
-	static List<String> wordSorter() {
+	static void importWords() {
 		List<String> words = new ArrayList<String>();
 		
 		try {
@@ -51,10 +53,9 @@ public class FileManager {
 		
 		for (int i = 0; i < remove.split(",").length; i++) {
 			words.remove(remove.split(",")[i]);
-			removed++;
 		}
 		
-		return words;
+		defaultWords = words;
 	}
 	
 	public static boolean isAlpha(String s) {

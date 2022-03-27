@@ -5,6 +5,13 @@ import java.util.List;
 
 public class LetterProcessor {
 
+	static List<String> beginLetter(String letter, List<String> list) {
+		
+		return list;
+	}
+	
+	
+	
 	static List<String> containingLetters = new ArrayList<String>();
 	
 	static List<String> redLetter(String letter, int pos, List<String> list) {

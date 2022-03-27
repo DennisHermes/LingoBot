@@ -6,23 +6,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+
 public class MainClass {
 
 	public static void main(String[] args) {
 		
 		AppLauncher.lauch();
 		
-		AppLauncher.loadingText.setText("App aan het starten...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
 		//importing words
 		AppLauncher.loadingText.setText("Woorden aan het importeren...");
-		List<String> wordsRaw = FileManager.wordSorter();
-		AppLauncher.loadingText.setText(wordsRaw.size() + " woorden gevonden. (" + FileManager.removed + " woorden geblokkeerd)");
+		WordsManager.importWords();
+		AppLauncher.loadingText.setText(WordsManager.defaultWords.size() + " woorden gevonden. (" + WordsManager.removed + " woorden geblokkeerd)");
+		WordsManager.possibleWords = WordsManager.defaultWords;
 		
 		try {
 			Thread.sleep(3000);
@@ -32,9 +27,10 @@ public class MainClass {
 		
 		AppLauncher.fadeOut(AppLauncher.loadingText);
 		
+		AppLauncher.beginLetterScreen();
+		
 		for (int i = 0; i < 100; i++) {
-			List<String> words = wordsRaw;
-			lingo(words);
+			lingo(WordsManager.defaultWords);
 		}
 	}
 	

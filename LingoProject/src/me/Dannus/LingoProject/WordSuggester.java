@@ -104,10 +104,15 @@ public class WordSuggester {
 		
         String suggesting = "";
         if (sorted.size() > 0) suggesting = suggesting + sorted.get(sorted.size() - 1);
-        if (sorted.size() > 1) suggesting = suggesting + ", " + sorted.get(sorted.size() - 2);
-        if (sorted.size() > 2) suggesting = suggesting + ", " + sorted.get(sorted.size() - 3);
-        if (sorted.size() > 3) suggesting = suggesting + ", " + sorted.get(sorted.size() - 4);
-        if (sorted.size() > 4) suggesting = suggesting + ", " + sorted.get(sorted.size() - 5);
+        if (sorted.size() > 1) suggesting = suggesting + "," + sorted.get(sorted.size() - 2);
+        if (sorted.size() > 2) suggesting = suggesting + "," + sorted.get(sorted.size() - 3);
+        if (sorted.size() > 3) suggesting = suggesting + "," + sorted.get(sorted.size() - 4);
+        if (sorted.size() > 4) suggesting = suggesting + "," + sorted.get(sorted.size() - 5);
+        if (sorted.size() > 5) suggesting = suggesting + "," + sorted.get(sorted.size() - 6);
+        if (sorted.size() > 6) suggesting = suggesting + "," + sorted.get(sorted.size() - 7);
+        if (sorted.size() > 7) suggesting = suggesting + "," + sorted.get(sorted.size() - 8);
+        if (sorted.size() > 8) suggesting = suggesting + "," + sorted.get(sorted.size() - 9);
+        if (sorted.size() > 9) suggesting = suggesting + "," + sorted.get(sorted.size() - 10);
         
 		return suggesting;
 	}
